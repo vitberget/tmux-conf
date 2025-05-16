@@ -1,0 +1,6 @@
+tmux list-sessions \
+| sed   -e "s/(attached)/*attached*/" \
+        -e "s/ (created.*)//" \
+| fzf-tmux  -p 40%,30 \
+| cut -d':' -f1 \
+| xargs -I {} tmux switch -t {}

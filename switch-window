@@ -1,0 +1,5 @@
+tmux list-windows \
+| sed  -e "s/ \[.*@[0-9]*//" \
+| fzf-tmux  -p 40%,30 \
+| cut -d':' -f1 \
+| xargs -I {} tmux select-window -t {}
