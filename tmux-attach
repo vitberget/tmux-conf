@@ -1,0 +1,2 @@
+session=$(tmux list-sessions | sed -e 's/:.*//' | fzf-tmux) 
+tmux attach -t $session 
