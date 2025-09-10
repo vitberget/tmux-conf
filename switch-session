@@ -1,3 +1,4 @@
+#!/bin/bash
 tmux list-sessions \
 | sed   -e "s/(attached)/*attached*/" \
         -e "s/ (created.*)//" \
