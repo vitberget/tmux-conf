@@ -1,2 +1,5 @@
-session=$(tmux list-sessions | sed -e 's/:.*//' | fzf-tmux) 
-tmux attach -t $session 
+#!/bin/bash
+SESSION=$(tmux list-sessions | sed -e 's/:.*//' | fzf-tmux 2>/dev/null) 
+if [[ $? == 0 ]]; then
+    tmux attach -t $SESSION 
+fi
