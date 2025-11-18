@@ -1,0 +1,9 @@
+#!/bin/bash
+if [ "$1" == "" ]; then
+    SESSION=$(tmux list-sessions | sed -e 's/:.*//' | fzf-tmux 2>/dev/null) 
+    if [[ $? == 0 ]]; then
+        tmux attach -t $SESSION 
+    fi
+else
+    tmux new -A -s $1
+fi
