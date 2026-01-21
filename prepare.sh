@@ -1,6 +1,6 @@
 #!/bin/sh
 mkdir -p ~/.config/tmux/plugins
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
-ln -s ~/.config/tmux/tmux-attach ~/bin/
+ln -s ~/.config/tmux/tmuxit ~/bin/
 
-echo "yoy should run install-deps.sh"
+echo "You should run install-deps.sh"
