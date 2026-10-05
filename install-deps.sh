@@ -4,11 +4,11 @@ OS_ID=$(cat /etc/os-release | grep "^ID")
 
 case "$OS_ID" in
     "ID=arch")      
-        sudo pacman -S fzf
+        sudo pacman -S fzf tmux
         ;;
 
     "ID=debian")
-        sudo apt install fzf
+        sudo apt install fzf tmux
         ;;
 
     *)              
